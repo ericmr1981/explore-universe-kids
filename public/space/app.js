@@ -38,16 +38,14 @@ function formatOrbitalPeriod(days) {
 // Calculate orbit duration based on Kepler's Third Law
 // T² ∝ a³, so T ∝ a^(3/2), where a is the orbital radius
 // Angular velocity ω ∝ a^(-3/2)
-// For visual appeal, we use a scaled version with exponent compression
 function calculateOrbitDuration(orbitRadius) {
   // Base duration for Earth (orbitRadius = 100)
   const earthDuration = 20; // seconds for one orbit
   const earthRadius = 100;
   
   // Kepler's Third Law: T ∝ a^(3/2)
-  // We use exponent 1.2 instead of 1.5 for visual compression
-  // This maintains relative speeds while keeping outer planets visible
-  const keplerExponent = 1.2;
+  // T is orbital period, a is semi-major axis (orbital radius)
+  const keplerExponent = 1.5;
   
   // Calculate duration based on orbital radius
   const duration = earthDuration * Math.pow(orbitRadius / earthRadius, keplerExponent);
