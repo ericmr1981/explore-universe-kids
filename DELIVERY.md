@@ -12,10 +12,10 @@
 
 | 文件路径 | 说明 |
 |----------|------|
-| `public/index.html` | 主页面，含太阳系画布、行星元素、信息弹窗 |
-| `public/styles.css` | 轨道样式、动画 keyframes、响应式布局 |
-| `public/app.js` | 行星数据加载、点击事件、弹窗控制、认证检查 |
-| `public/data/planets.json` | 8 大行星数据 + 太阳数据 |
+| `public/space/index.html` | 主页面，含太阳系画布、行星元素、信息弹窗 |
+| `public/space/styles.css` | 轨道样式、动画 keyframes、响应式布局 |
+| `public/space/app.js` | 行星数据加载、点击事件、弹窗控制、认证检查 |
+| `public/space/data/planets.json` | 8 大行星数据 + 太阳数据 |
 | `README.md` | 项目说明、部署指引 |
 | `package.json` | 项目配置、开发脚本 |
 | `.gitignore` | Git 忽略规则 |
@@ -81,7 +81,7 @@ curl -I http://localhost:8080/space/data/planets.json
 
 ---
 
-## 3. 运行方式
+## 4. 运行方式
 
 ### 本地测试
 
@@ -114,7 +114,7 @@ location /space/ {
 
 ---
 
-## 4. 验收步骤
+## 5. 验收步骤
 
 ### 4.1 视觉验收
 
@@ -153,7 +153,7 @@ location /space/ {
 
 ---
 
-## 5. 关键实现说明
+## 6. 关键实现说明
 
 ### 5.1 Base Path 处理
 
@@ -193,7 +193,7 @@ function calculateOrbitDuration(speed) {
 
 ---
 
-## 6. 风险点说明
+## 7. 风险点说明
 
 | 风险 | 影响 | 缓解措施 |
 |------|------|----------|
@@ -204,7 +204,7 @@ function calculateOrbitDuration(speed) {
 
 ---
 
-## 7. 部署命令清单
+## 8. 部署命令清单
 
 ### 7.1 克隆到 VPS
 
@@ -247,7 +247,7 @@ git push
 
 ---
 
-## 8. 回滚方案
+## 9. 回滚方案
 
 ### 回滚 Portal 入口
 
@@ -267,7 +267,7 @@ git clone https://github.com/ericmr1981/explore-universe-kids.git space -b <prev
 
 ---
 
-## 9. 签署
+## 10. 签署
 
 此交付已完成以下检查:
 
