@@ -22,7 +22,32 @@
 
 ---
 
-## 2. Portal apps.json 配置片段
+## 2. Smoke Test Results
+
+### Local HTTP Server Test
+
+Started local server: `python3 -m http.server 8080` in `public/` directory.
+
+**Test Results:**
+- ✅ `http://localhost:8080/space/index.html` → HTTP 200 (OK)
+- ✅ `http://localhost:8080/space/data/planets.json` → HTTP 200 (OK)
+- ✅ `planets.json` → Valid JSON (8 planets + sun data)
+
+### Verification Commands
+
+```bash
+cd public
+python3 -m http.server 8080
+
+# Test in another terminal:
+curl -I http://localhost:8080/space/index.html
+# Expected: HTTP/1.0 200 OK
+
+curl -I http://localhost:8080/space/data/planets.json
+# Expected: HTTP/1.0 200 OK
+```
+
+## 3. Portal apps.json 配置片段
 
 **注意:** 此片段需添加到 `app-Home-Portal/public/config/apps.json` 的 `apps` 数组中。
 
