@@ -35,14 +35,25 @@ function formatOrbitalPeriod(days) {
   return days + ' 天';
 }
 
-// Calculate orbit duration based on speed (min 5s, max 60s)
-function calculateOrbitDuration(speed) {
-  const minDuration = 5;
-  const maxDuration = 60;
-  // Clamp speed to ensure visible but different speeds
-  const clampedSpeed = Math.max(0.15, Math.min(1.0, speed));
-  const duration = maxDuration - (clampedSpeed * (maxDuration - minDuration));
-  return duration;
+// Calculate orbit duration based on Kepler's Third Law
+// T² ∝ a³, so T ∝ a^(3/2), where a is the orbital radius
+// Angular velocity ω ∝ a^(-3/2)
+// For visual appeal, we use a scaled version with exponent compression
+function calculateOrbitDuration(orbitRadius) {
+  // Base duration for Earth (orbitRadius = 100)
+  const earthDuration = 20; // seconds for one orbit
+  const earthRadius = 100;
+  
+  // Kepler's Third Law: T ∝ a^(3/2)
+  // We use exponent 1.2 instead of 1.5 for visual compression
+  // This maintains relative speeds while keeping outer planets visible
+  const keplerExponent = 1.2;
+  
+  // Calculate duration based on orbital radius
+  const duration = earthDuration * Math.pow(orbitRadius / earthRadius, keplerExponent);
+  
+  // Clamp to reasonable bounds (min 3s for Mercury, max 90s for Neptune)
+  return Math.max(3, Math.min(90, duration));
 }
 
 // Create planet element
@@ -55,12 +66,12 @@ function createPlanet(planet, index) {
   const orbitSize = planet.orbitRadius * 2;
   orbit.style.width = `${orbitSize}px`;
   orbit.style.height = `${orbitSize}px`;
-  orbit.style.animationDuration = `${calculateOrbitDuration(planet.speed)}s`;
+  orbit.style.animationDuration = `${calculateOrbitDuration(planet.orbitRadius)}s`;
 
   // Create planet container for counter-rotation
   const planetContainer = document.createElement('div');
   planetContainer.className = 'planet-container';
-  planetContainer.style.animationDuration = `${calculateOrbitDuration(planet.speed)}s`;
+  planetContainer.style.animationDuration = `${calculateOrbitDuration(planet.orbitRadius)}s`;
 
   // Position planet on orbit
   const planetEl = document.createElement('div');

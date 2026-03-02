@@ -16,7 +16,6 @@
       "color": "#B5B5B5",
       "size": "small",
       "orbitRadius": 50,
-      "speed": 1.0,
       "description": "太阳系最小的行星，也是离太阳最近的行星。表面温差极大，白天可达430°C，夜晚降至-180°C。"
     },
     {
@@ -28,7 +27,6 @@
       "color": "#E6C87A",
       "size": "medium",
       "orbitRadius": 75,
-      "speed": 0.8,
       "description": "被称为“启明星”或“长庚星”。它是太阳系中最热的行星，表面温度约465°C，大气主要由二氧化碳组成。"
     },
     {
@@ -40,7 +38,6 @@
       "color": "#6B93D6",
       "size": "medium",
       "orbitRadius": 100,
-      "speed": 0.6,
       "description": "我们居住的蓝色星球，是太阳系中唯一已知存在生命的行星。71%的表面被水覆盖，拥有适宜生命的大气层。"
     },
     {
@@ -52,7 +49,6 @@
       "color": "#E27B58",
       "size": "small",
       "orbitRadius": 130,
-      "speed": 0.5,
       "description": "被称为“红色星球”，因为表面覆盖着氧化铁。它有两个小卫星，是人类探索最多的行星之一。"
     },
     {
@@ -64,7 +60,6 @@
       "color": "#D8CA9D",
       "size": "large",
       "orbitRadius": 175,
-      "speed": 0.3,
       "description": "太阳系最大的行星，质量是其他所有行星总和的2.5倍。著名的大红斑是一个持续了数百年的风暴。"
     },
     {
@@ -76,7 +71,6 @@
       "color": "#F4D59E",
       "size": "large",
       "orbitRadius": 220,
-      "speed": 0.25,
       "description": "以其壮观的环系而闻名。土星环主要由冰块和岩石组成，直径达27万公里，但厚度只有几十米。"
     },
     {
@@ -88,7 +82,6 @@
       "color": "#D1E7E7",
       "size": "medium",
       "orbitRadius": 260,
-      "speed": 0.2,
       "description": "一颗躺在轨道上自转的行星，自转轴倾斜角98度。它有27颗已知卫星，大气中含有甲烷使其呈现青色。"
     },
     {
@@ -100,7 +93,6 @@
       "color": "#5B5DDF",
       "size": "medium",
       "orbitRadius": 300,
-      "speed": 0.15,
       "description": "太阳系最外层的行星，风速可达每小时2100公里。它拥有14颗已知卫星，其中最大的是海卫一。"
     }
   ]
