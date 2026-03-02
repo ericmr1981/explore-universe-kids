@@ -1,0 +1,19 @@
+{
+  "name": "explore-universe-kids",
+  "version": "1.0.0",
+  "description": "太阳系动态运行图 - 儿童科普应用",
+  "main": "public/app.js",
+  "scripts": {
+    "dev": "npx serve public -p 8080",
+    "lint": "echo 'Linting skipped - no linter configured'"
+  },
+  "keywords": [
+    "solar-system",
+    "education",
+    "kids",
+    "space",
+    "animation"
+  ],
+  "author": "",
+  "license": "MIT"
+}
